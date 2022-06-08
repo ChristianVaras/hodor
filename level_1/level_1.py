@@ -7,7 +7,6 @@ import sys
 
 success_votes = 0
 error_cases = 0
-user_id = 3414
 number_print = 4096
 url = "http://158.69.76.135/level1.php"
 
@@ -19,7 +18,7 @@ for i in range(0, number_print):
     soup = BeautifulSoup(r.text, "lxml")
     key_value = soup.find('form').find('input', {'name' : 'key'})['value']
 
-    votation = {'id': user_id, 'holdthedoor': 'Submit', 'key': key_value}
+    votation = {'id': '3414', 'holdthedoor': 'Submit', 'key': key_value}
     vote = cookies_page.post(url, data=votation)
 #    print(vote.cookies)
 
